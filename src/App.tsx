@@ -558,7 +558,7 @@ function App() {
         <section id="projects" className="section section-tint">
           <div className="container">
             <SectionTitle eyebrow={t.projects.eyebrow} title={t.projects.title} intro={t.projects.intro} />
-            <div className="projects-grid">{t.projects.items.map((project, index) => <article className={`project-card reveal ${index < 2 ? "featured" : ""}`} key={project.title}><ProjectVisual type={project.type} image={project.image} label={`${t.projects.preview}: ${project.title}`} /><div className="project-body"><h3>{project.title}</h3><p>{project.description}</p><div className="tags">{project.tags.map((tag) => <Tag key={tag}>{tag}</Tag>)}</div><div className="project-links">{project.url && <Button href={project.url} variant="secondary" icon="external">{t.projects.visit}</Button>}<Button href={project.github} variant="ghost" icon="github">{t.projects.github}</Button></div></div></article>)}</div>
+            <div className="projects-grid">{t.projects.items.map((project, index) => <article className={`project-card reveal ${index < 2 ? "featured" : ""}`} key={project.title}><ProjectVisual type={project.type} image={project.image} label={`${t.projects.preview}: ${project.title}`} /><div className="project-body"><h3>{project.title}</h3><p>{project.description}</p><div className="tags">{project.tags.map((tag) => <Tag key={tag}>{tag}</Tag>)}</div><div className="project-links">{project.url && <Button href={project.url} variant="secondary" icon="external">{t.projects.visit}</Button>}{project.github && <Button href={project.github} variant="ghost" icon="github">{t.projects.github}</Button>}</div></div></article>)}</div>
           </div>
         </section>
 
